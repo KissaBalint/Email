@@ -8,10 +8,24 @@ namespace Email
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
-         while(true)
+
+            //adatszerkezet
+            List<string> e_mailok = new List<string>();
+            e_mailok.Add("alma1@kört.hu");
+            e_mailok.Add("alma2@dfdfdf.hu");
+            e_mailok.Add("alma3@sdssds.hu");
+            e_mailok.Add("kissb1@kkszki.hu");
+            e_mailok.Add("alma.korte@alma.hu");
+
+
+
+            //menü vezérlés
+            while (true)
             {
+                
                 Console.Clear();
                 Console.WriteLine("0 - Kilépés");
                 Console.WriteLine("1 - e-mailok listázása");
