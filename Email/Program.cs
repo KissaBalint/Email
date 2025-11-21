@@ -38,7 +38,15 @@ namespace Email
                 switch (valasztas) 
                 {
                     case "0" : return;
-                    case "1" : Console.WriteLine("e-mailok listázása"); break;
+                    case "1" :
+                        Console.Clear();
+                        Console.WriteLine("e-mail címek: ");
+                        int sorszam = 0;
+                        foreach (string e_mail in e_mailok)
+                        {
+                        Console.WriteLine($"{sorszam++}.{e_mail}");
+                        }; 
+                        break;
                     case "2" : Console.WriteLine("új e-mail"); break;
                     case "3" : Console.WriteLine("e-mail törlése"); break;
                     case "4" : Console.WriteLine("érvényes e-mailok listázása"); break;
