@@ -63,7 +63,17 @@ namespace Email
                         e_mailok.RemoveAt(index);
                         break;
 
-                    case "4" : Console.WriteLine("érvényes e-mailok listázása"); break;
+                    case "4" :
+                        Console.WriteLine("érvényes e-mailok listája");
+                        foreach (string e_mail in e_mailok)
+                        {
+                            if (e_mail.Contains('@') && e_mail.Contains('@'))
+                            {
+                                Console.WriteLine(e_mail);
+                            }
+                        }
+                        break;
+
                     default : Console.WriteLine("rossz parancs");break;
                 }
                 Console.ReadKey();
