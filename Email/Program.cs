@@ -56,7 +56,12 @@ namespace Email
                         e_mailok.Add(uj);
                         break;
 
-                    case "3" : Console.WriteLine("e-mail törlése"); break;
+                    case "3" :
+                        Console.Clear();
+                        Console.Write("Adja meg a törlendő e-mail azonosítóját: ");
+                        int index = Convert.ToInt32(Console.ReadLine());
+                        e_mailok.RemoveAt(index);
+                        break;
 
                     case "4" : Console.WriteLine("érvényes e-mailok listázása"); break;
                     default : Console.WriteLine("rossz parancs");break;
